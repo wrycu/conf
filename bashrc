@@ -56,6 +56,7 @@ fi
 #if [ "$color_prompt" = yes ]; then
    #modified by Tim
 source ~/.colors
+export TERM=xterm-256color
 export PS1="\e[36m[\e[m\e[31m\u\e[m@\e[32m\h\e[m\e[36m]\e[m \e[35m\w\e[m\n\\e[37m$\e[m "
 #export PS1="\[$Cyan\]\h: \[$Red\]\W \[$Yellow\]"
    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
