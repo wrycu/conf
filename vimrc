@@ -8,3 +8,4 @@ set shiftwidth=4
 "can be downloaded at https://github.com/altercation/vim-colors-solarized/blob/master/colors/solarized.vim
 "(but it's auto-downloaded)
 colorscheme solarized
+set shiftwidth=4
