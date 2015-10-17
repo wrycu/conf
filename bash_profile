@@ -1,7 +1,16 @@
-   #modified by Tim
+#modified by Tim
 source ~/.colors
 export TERM=xterm-256color
-export PS1="\e[36m[\e[m\e[31m\u\e[m@\e[32m\h\e[m\e[36m]\e[m \e[35m\w\e[m\n\\e[37m$\e[m "
+# Backup prompt. Use if you can't use powerline or the powerline font
+#export PS1="\e[36m[\e[m\e[31m\u\e[m@\e[32m\h\e[m\e[36m]\e[m \e[35m\w\e[m\n\\e[37m$\e[m "
+
+function _update_ps1() {
+     PS1="$(~/powerline-shell/powerline-shell.py $? 2> /dev/null)"
+}
+
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
