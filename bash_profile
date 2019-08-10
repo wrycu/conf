@@ -2,7 +2,13 @@
 source ~/.colors
 export TERM=xterm-256color
 # Backup prompt. Use if you can't use powerline or the powerline font
-#export PS1="\e[36m[\e[m\e[31m\u\e[m@\e[32m\h\e[m\e[36m]\e[m \e[35m\w\e[m\n\\e[37m$\e[m "
+CYAN='\[\033[36m\]'
+RED='\[\033[31m\]'
+GREEN='\[\033[32m\]'
+PINK='\[\033[35m\]'
+WHITE='\[\033[37m\]'
+CLEAR='\[\033[0m\]'
+#export PS1="${CYAN}[${RED}\u${CLEAR}@${GREEN}\h${CYAN}] ${PINK}~\n${WHITE}\$${CLEAR} "
 
 function _update_ps1() {
      PS1="$(~/powerline-shell/powerline-shell.py $? 2> /dev/null)"
