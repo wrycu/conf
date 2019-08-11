@@ -8,7 +8,7 @@ GREEN='\[\033[32m\]'
 PINK='\[\033[35m\]'
 WHITE='\[\033[37m\]'
 CLEAR='\[\033[0m\]'
-#export PS1="${CYAN}[${RED}\u${CLEAR}@${GREEN}\h${CYAN}] ${PINK}~\n${WHITE}\$${CLEAR} "
+#export PS1="${CYAN}[${RED}\u${CLEAR}@${GREEN}\h${CYAN}] ${PINK}\w\n${WHITE}\$${CLEAR} "
 
 function _update_ps1() {
      PS1="$(~/powerline-shell/powerline-shell.py $? 2> /dev/null)"
